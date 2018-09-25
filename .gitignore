@@ -1,0 +1,7 @@
+## data
+data/mysql
+data/redis
+
+## logs
+logs/php7
+logs/nginx
