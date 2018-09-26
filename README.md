@@ -1,20 +1,20 @@
 ## build image 
 ```
 cd ./config/redis
-sudo docker build -t btbtop/redis3.2:0.0.1 .
+sudo docker build -t myapp/redis3.2:0.0.1 .
 
 cd ../../
 cd ./config/mysql
-sudo docker build -t btbtop/mysql5.7:0.0.1 .
+sudo docker build -t myapp/mysql5.7:0.0.1 .
 
 
 cd ../../
 cd ./config/php7
-sudo docker build -t btbtop/php7.0-fpm:0.0.1 .
+sudo docker build -t myapp/php7.0-fpm:0.0.1 .
 
 cd ../../
 cd ./config/nginx
-sudo docker build -t btbtop/nginx1.14:0.0.1 .
+sudo docker build -t myapp/nginx1.14:0.0.1 .
 
 cd ../../
 ```
@@ -35,10 +35,10 @@ mkdir -p logs/php7/
 docker image ls  
 
 ### deploy docker-composer.yml file
-docker stack deploy -c docker-compose.yml btbtop
+docker stack deploy -c docker-compose.yml myapp
 
 ### rm stack
-docker stack rm btbtop
+docker stack rm myapp
 
 ### list containers
 docker container ls -a   

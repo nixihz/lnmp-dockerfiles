@@ -1,7 +1,7 @@
 version: "3"
 services:
     mysql:
-        image: "btbtop/mysql5.7:0.0.1"
+        image: "myapp/mysql5.7:0.0.1"
         ports:
             - "3316:3306"
         command: --default-authentication-plugin=mysql_native_password
@@ -13,7 +13,7 @@ services:
         networks:
             - webnet
     redis:
-        image: "btbtop/redis3.2:0.0.1"
+        image: "myapp/redis3.2:0.0.1"
         ports:
             - "6379:6379"
         volumes:
@@ -26,7 +26,7 @@ services:
         networks:
             - webnet
     php7:
-        image: "btbtop/php7.0-fpm:0.0.1"
+        image: "myapp/php7.0-fpm:0.0.1"
         ports:
             - "9009:9000"
         volumes:
@@ -38,7 +38,7 @@ services:
         networks:
             - webnet
     nginx:
-        image: "btbtop/nginx1.14:0.0.1"
+        image: "myapp/nginx1.14:0.0.1"
         ports:
             - "80:80"
             - "443:443"
