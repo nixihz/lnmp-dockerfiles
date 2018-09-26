@@ -34,6 +34,9 @@ mkdir -p logs/php7/
 ### list images
 docker image ls  
 
+### swarm init
+docker swarm init
+
 ### deploy docker-composer.yml file
 docker stack deploy -c docker-compose.yml myapp
 
